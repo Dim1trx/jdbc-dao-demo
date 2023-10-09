@@ -10,9 +10,10 @@ import java.util.List;
 
 public class Program {
     public static void main(String[] args) {
-
         SellerDao sellerDao = DaoFactory.createSellerDAO();
-        System.out.println("=== TEST 1: seller findByID ===");
+
+
+      /*  System.out.println("=== TEST 1: seller findByID ===");
         Seller seller = sellerDao.findById(1);
         System.out.println("seller = " + seller);
 
@@ -23,7 +24,7 @@ public class Program {
 
         System.out.println("\n=== TEST 3: seller findAll===");
         list = sellerDao.findAll();
-        list.forEach(System.out::println);
+        list.forEach(System.out::println);*/
 
 /*        System.out.println("\n=== TEST 4: seller insert===");
         Seller obj = new Seller(null, "Greg", "greg@gmail.com", new Date(),
@@ -32,12 +33,17 @@ public class Program {
         sellerDao.insert(obj);
         System.out.println("Inserted! new ID = " + obj.getId());*/
 
-        System.out.println("\n=== TEST 4: seller update===");
+/*        System.out.println("\n=== TEST 5: seller update===");
         Seller temp = sellerDao.findById(10);
         temp.setName("Yago");
         temp.setEmail("yago@gmail.com");
 
         sellerDao.update(temp);
-        System.out.println("Update completed");
+        System.out.println("Update completed");*/
+
+        System.out.println("\n=== TEST 6: seller update===");
+        sellerDao.deleteById(8);
+        System.out.println("Seller deleted");
+
     }
 }
